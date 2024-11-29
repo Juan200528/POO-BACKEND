@@ -1,0 +1,202 @@
+ <!DOCTYPE html>
+ <html lang="es">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>TALLER COMPLETO</title>
+     <link rel="stylesheet" href="TALLERCOMPLETO.CSS">
+     
+ </head>
+ <body>
+
+     <h1>Ejercicio 1: Gestión de Estudiantes</h1>
+     <form id="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" required><br><br>
+
+        <label for="calificacion">Calificación:</label>
+        <input type="text" id="calificacion" name="calificacion"><br><br>
+
+        <button type="button" onclick="agregarEstudiante()">Agregar Estudiante</button>
+        <button type="button" onclick="agregarCalificacion()">Agregar Calificación</button>
+        <button type="button" onclick="mostrarCalificaciones()">Mostrar Calificaciones</button>
+        <button type="button" onclick="calcularPromedio()">Calcular Promedio</button>
+        <div id="resultado"></div>
+     </form>
+
+
+     <h1>Ejercicio 2: Bienvenido al Zoológico</h1>
+     <h2>Agregar Animal</h2>
+     <label for="nombreAnimal">Nombre del Animal:</label>
+     <input type="text" id="nombreAnimal" placeholder="Nombre"><br>
+     <label for="tipoAnimal">Tipo de Animal:</label>
+     <select id="tipoAnimal">
+        <option value="">Seleccione un tipo</option>
+        <option value="Leon">León</option>
+        <option value="Elefante">Elefante</option>
+        <option value="Tigre">Tigre</option>
+     </select><br>
+     <button onclick="agregarAnimal()">Agregar Animal</button>
+     <button onclick="hacerSonidos()">Hacer Sonidos</button>
+     <div id="resultado1" class="resultado"></div>
+
+    
+     <h1>Ejercicio 3: Inventario de Productos</h1>
+     <form id="formularioProductos">
+        <label for="nombreProducto">Nombre del Producto:</label>
+        <input type="text" id="nombreProducto" name="nombreProducto" required>
+        
+        <label for="precioProducto">Precio:</label>
+        <input type="number" id="precioProducto" name="precioProducto" required><br><br>
+        
+        <label for="cantidadStock">Cantidad en Stock:</label>
+        <input type="number" id="cantidadStock" name="cantidadStock" required><br><br>
+
+        <label for="tipoProducto">Tipo de Producto:</label>
+        <select id="tipoProducto" onchange="toggleMarca()">
+         <option value="Producto">Producto</option>
+         <option value="Electrodomestico">Electrodoméstico</option>
+        </select><br>
+
+        <div id="marcaProductos" style="display:none;">
+         <label for="marcaProducto">Marca:</label>
+         <input type="text" id="marcaProducto" name="marcaProducto"><br>
+        </div>
+
+        <button type="button" onclick="agregarProducto()">Agregar Producto</button>
+        <button type="button" onclick="listarProductosConBajoStock()">Listar Productos con Bajo Stock</button>
+        <div id="resultado2"></div>
+     </form>
+
+
+     <h1>Ejercicio 4: Sistema de Empleados</h1>
+        <h2>Agregar Empleado</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombreEmpleado" placeholder="Nombre"><br>
+        <label for="sueldo">Sueldo por Hora:</label>
+        <input type="number" id="sueldoEmpleado" placeholder="Sueldo por Hora"><br>
+        <label for="tipoEmpleado">Tipo de Empleado:</label>
+        <select id="tipoEmpleado">
+         <option value="">Seleccione un tipo</option>
+         <option value="Tiempo Completo">Empleado a Tiempo Completo</option>
+         <option value="Medio Tiempo">Empleado a Medio Tiempo</option>
+        </select><br>
+        <label for="horas">Horas Trabajadas:</label>
+        <input type="number" id="horasTrabajadas" placeholder="Horas Trabajadas"><br>
+        <button type="button" onclick="agregarEmpleado()">Agregar Empleado</button>
+        <button type="button" onclick="listarEmpleados()">Listar Empleados</button>
+        <h2>Resultados</h2>
+        <div id="resultado3"></div>
+     </div>
+     </div>
+    
+    
+     <h2>Ejercicio 5: Sistema Bancario</h2>
+
+     <label for="numeroCuenta">Número de Cuenta:</label>
+     <input type="text" id="numeroCuenta"><br>
+
+     <label for="tipoCuenta">Tipo de Cuenta:</label>
+     <select id="tipoCuenta">
+        <option value="ahorros">Cuenta de Ahorros</option>
+        <option value="corriente">Cuenta Corriente</option>
+     </select><br>
+
+     <label for="monto">Monto:</label>
+     <input type="number" id="monto"><br>
+
+     <button onclick="crearCuenta()">Crear Cuenta</button>
+     <button onclick="depositar()">Depositar</button>
+     <button onclick="retirar()">Retirar</button>
+
+     <h3>Listado de Cuentas</h3>
+     <ul id="listadoCuentas"></ul>
+     <div class="cuadro">
+
+
+     <h1>Ejercicio 6: Catálogo de Vehículos</h1>
+     <form id="formularioVehiculos">
+        <label for="marca">Marca:</label>
+        <input type="text" id="marca" name="marca" required><br>
+
+        <label for="modelo">Modelo:</label>
+        <input type="text" id="modelo" name="modelo" required><br>
+
+        <label for="anio">Año:</label>
+        <input type="number" id="anio" name="anio" required><br>
+
+        <label for="tipoVehiculo">Tipo:</label>
+        <input type="text" id="tipoVehiculo" name="tipoVehiculo" required><br>
+
+        <button type="button" onclick="agregarVehiculo()">Agregar Vehículo</button>
+        <button type="button" onclick="listarVehiculos()">Listar Vehículos</button>
+        <div id="resultado2"></div>
+     </form>
+
+
+     <h1>Ejercicio 8: Biblioteca</h1>
+     <form id="formularioLibros">
+        <label for="nombreTitulo">Título:</label>
+        <input type="text" id="nombreTitulo" required><br>
+
+        <label for="autor">Autor:</label>
+        <input type="text" id="autor" required><br>
+
+        <label for="tipo">Tipo:</label>
+        <select id="tipo" onchange="mostrarCampos()">
+         <option value="fisico">Físico</option>
+         <option value="digital">Digital</option>
+        </select><br>
+
+        <div id="campoDigital" style="display:none;">
+         <label for="formato">Formato:</label>
+         <input type="text" id="formato"><br>
+        </div>
+
+        <div id="campoFisico" style="display:none;">
+         <label for="paginas">Páginas:</label>
+         <input type="number" id="paginas"><br>
+     </div>
+
+        <button type="button" onclick="agregarLibro()">Agregar Libro</button>
+        <button type="button" onclick="listarLibros()">Listar Libros</button>
+        <button type="button" onclick="listarLibrosPorAutor()">Buscar Libros por Autor</button>
+        <div id="listadoLibros"></div>
+        <div id="listaLibrosPorAutor"></div>
+     </form>
+
+
+     <h1>Ejercicio 9: Sistema de Transporte</h1>
+     <form id="formularioTransporte">
+        <label for="tipoTransporte">Tipo de Transporte:</label>
+        <input type="text" id="tipoTransporte" required><br>
+
+        <label for="capacidad">Capacidad:</label>
+        <input type="number" id="capacidad" required><br>
+
+        <label for="tipoCombustible">Tipo de Combustible:</label>
+        <input type="text" id="tipoCombustible" required><br>
+
+        <button type="button" onclick="agregarTransporte()">Agregar Transporte</button>
+        <div id="listaTransportes"></div>
+     </form>
+
+
+     <h1>Ejercicio 10: Tienda de Mascotas</h1>
+     <form id="formularioMascotas">
+        <label for="nombreMascota">Nombre de la Mascota:</label>
+        <input type="text" id="nombreMascota" required><br>
+
+        <label for="tipoMascota">Tipo de Mascota:</label>
+        <input type="text" id="tipoMascota" required><br>
+
+        <button type="button" onclick="agregarMascota()">Agregar Mascota</button>
+        <div id="listaMascotas"></div>
+     </form>
+
+     <script src="TALLERCOMPLETO.JS"></script>
+ </body>
+ </html>
